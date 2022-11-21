@@ -1,0 +1,23 @@
+.main_content{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    padding:2em;
+    align-items:center;
+    justify-content:center;
+}
+.main_content h1{
+    display:flex;
+    font-size:2.5em;
+    margin-bottom:1em;
+   
+}
+.main_content img{
+    width:360px;
+    margin:2em 0;
+    display:flex;
+}
+
+.main_content p{
+    font-size:1.25em;
+}
