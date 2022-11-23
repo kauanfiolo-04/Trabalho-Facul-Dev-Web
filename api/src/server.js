@@ -1,8 +1,15 @@
-const app=require('./app')
+require('dotenv').config({path:'.env'})
+const express=require('express')
+const cors=require('cors')
+const bodyParser=require('body-parser')
 
-require('dotenv').config()
+const routes=require('./routes')
 
-const PORT=process.env.PORT
+const server=express()
 
-app.listen(PORT,()=> console.log(`Server running on ${PORT}`))
+server.use(cors())
+server.use(bodyParser.urlencoded({extended:false}))
 
+server.use('/api',routes)
+
+server.listen(process.env.PORT, () => console.log(`Servidor rodando em: http://localhost:${process.env.port}`))
